@@ -24,9 +24,7 @@ const init = () => {
 					middlewareMode: true,
 				},
 				plugins: [
-					require("vite-plugin-windicss").default({
-						scan: true,
-					}),
+					require("vite-plugin-windicss").default(),
 					require("@preact/preset-vite").default(),
 				],
 			});

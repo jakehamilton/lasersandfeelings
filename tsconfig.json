@@ -1,0 +1,10 @@
+{
+	"compilerOptions": {
+		"module": "ESNext",
+		"moduleResolution": "node",
+		"jsx": "react-jsx",
+		"jsxImportSource": "preact",
+		"types": ["vite/client"],
+		"paths": {}
+	}
+}

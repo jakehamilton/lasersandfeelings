@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="46.687176"
+   height="27.388762"
+   viewBox="0 0 46.687176 27.388762"
+   version="1.1"
+   id="svg86536"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs86533">
+    <style
+       id="style87041"><![CDATA[
+.laser-pistol {
+  stroke-opacity:1;
+}
+]]></style>
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(-0.14391325,-10.198501)">
+    <g
+       id="g2015">
+      <path
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.6746;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 2.408676,18.341789 2.5681923,0.330736 c 0,0 1.0058315,1.809199 1.8292636,2.248507 0,0 -4.9171915,6.815148 -5.8249275,15.828931 h 7.9356977 c 0,0 0.4518366,-8.615459 3.3742869,-14.367322 0,0 14.803572,4.320697 26.035899,-1.057525 0,0 -0.532597,-1.543862 -0.599261,-3.517574 -0.0074,-0.217727 -0.01139,-0.225655 -0.0064,-0.458286 0.02441,-1.051128 0.192727,-2.331478 0.629498,-3.519578 0,0 -17.12071,-8.728688 -35.9422171,4.512045 z"
+         id="body"
+         class="laser-pistol" />
+      <path
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.591465;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 10.145444,28.765217 c 0,0 4.162209,-0.02152 5.915122,-1.327916 1.261975,-0.940373 1.926037,-1.574962 2.795298,-4.333064 l 0.391837,0.07543 c -0.911756,2.892928 -1.655879,3.669416 -2.987399,4.661537 -1.84949,1.378147 -6.226689,1.408253 -6.226689,1.408253 z"
+         id="trigger-guard"
+         class="laser-pistol" />
+      <path
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.481914;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;paint-order:normal"
+         d="m 13.785744,23.406951 c 0,0 -0.196166,1.355146 -0.119311,2.027897 0.0463,0.400402 0.238851,0.960802 0.341624,1.159876 0.116123,0.224946 0.186699,0.311084 0.186699,0.311084 0,0 -0.08376,-1.080337 -0.0463,-1.618961 0.03965,-0.578271 0.289679,-1.714779 0.289679,-1.714779 z"
+         id="trigger"
+         class="laser-pistol" />
+      <circle
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.465168;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="light-1"
+         cx="17.201742"
+         cy="19.084183"
+         r="0.81496024"
+         class="laser-pistol" />
+      <circle
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.465168;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="light-2"
+         cx="20.217096"
+         cy="19.084183"
+         r="0.81496024"
+         class="laser-pistol" />
+      <circle
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.465168;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="light-3"
+         cx="23.232454"
+         cy="19.084183"
+         r="0.81496024"
+         class="laser-pistol" />
+      <circle
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.465168;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="light-4"
+         cx="26.247818"
+         cy="19.084183"
+         r="0.81496024"
+         class="laser-pistol" />
+      <path
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.01778;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 14.270642,14.61255 c 9.746125,-3.263514 16.913636,-0.89262 16.913636,-0.89262 -1.175537,0.881118 -0.805745,2.502238 -0.642819,3.39423 L 18.487477,17.1978 c -1.533801,-0.03398 -3.996275,-0.615634 -4.21687,-2.58552 z"
+         id="display"
+         class="laser-pistol" />
+      <path
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.186067;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 38.184341,17.257845 h 6.359796 v 0.676923 h -6.359796 z"
+         id="antenna"
+         class="laser-pistol" />
+      <circle
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.125936"
+         id="ball"
+         cx="45.628906"
+         cy="17.596313"
+         r="1.2021841"
+         class="laser-pistol" />
+      <path
+         id="disc-3"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0837727;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 43.077478,16.041766 c -0.105879,-3.27e-4 -0.190945,0.69571 -0.190945,1.554529 0,0.858799 0.08576,1.554859 0.190945,1.554532 0.08698,-4.03e-4 0.162461,-0.477295 0.184517,-1.161026 -0.04785,-0.131833 -0.073,-0.270974 -0.073,-0.411253 1.39e-4,-0.139148 0.02396,-0.253585 0.07182,-0.384404 -0.02396,-0.667973 -0.09837,-1.152328 -0.183511,-1.152328 z"
+         class="laser-pistol" />
+      <path
+         id="disc-2"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0837727;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 41.614612,15.555515 a 0.20472867,2.0262885 0 0 0 -0.204679,2.026301 0.20472867,2.0262885 0 0 0 0.204679,2.026301 0.20472867,2.0262885 0 0 0 0.200009,-1.592907 1.202184,1.202184 0 0 1 -0.07559,-0.418952 1.202184,1.202184 0 0 1 0.07681,-0.420579 0.20472867,2.0262885 0 0 0 -0.200468,-1.62019 z"
+         class="laser-pistol" />
+      <path
+         id="disc-1"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0837306;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 40.264723,14.488496 a 0.3149232,3.1169323 0 0 0 -0.314842,3.116925 0.3149232,3.1169323 0 0 0 0.314842,3.116938 0.3149232,3.1169323 0 0 0 0.312185,-2.71059 0.55378381,0.55378381 0 0 1 -0.188163,-0.41541 0.55378381,0.55378381 0 0 1 0.188163,-0.415417 0.3149232,3.1169323 0 0 0 -0.312185,-2.692378 z"
+         class="laser-pistol" />
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="494.17322"
+   height="298.84723"
+   viewBox="0 0 130.75001 79.070006"
+   version="1.1"
+   id="svg86536"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs86533">
+    <style
+       id="style87041"><![CDATA[
+.laser-pistol {
+  stroke-opacity:1;
+}
+]]></style>
+  </defs>
+  <g
+     id="layer1">
+    <g
+       id="g87496"
+       transform="translate(-2.3583269,-28.198329)">
+      <path
+         style="fill:#b23232;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter"
+         d="m 7.1511565,50.904421 7.8050655,1.005264 c 0,0 3.05683,5.498364 5.559345,6.833478 0,0 -14.9439545,20.712067 -17.7026785,48.106067 H 26.930452 c 0,0 1.373192,-26.183421 10.254895,-43.664044 0,0 44.989875,13.131138 79.126313,-3.213965 0,0 -1.61855,-4.691988 -1.82135,-10.690343 -0.0224,-0.661695 -0.0357,-0.685878 -0.0193,-1.392697 0.074,-3.194513 0.5857,-7.085651 1.91305,-10.696439 0,0 -52.031957,-26.527542 -109.2328535,13.712679 z"
+         id="body"
+         class="laser-pistol" />
+      <path
+         style="fill:#906143;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter"
+         d="m 14.373634,101.75076 c 0.710722,0 8.730919,0.68996 10.183203,-5.049049 1.487244,-5.877159 3.602187,-19.611 7.610567,-28.376999 1.298356,-2.839399 -1.601274,-6.189808 -4.406083,-6.668664 -5.174901,-0.883493 -6.637401,1.410356 -8.324138,4.01927 -2.542253,3.932159 -8.136565,12.488893 -10.9100705,30.135383 -0.968897,6.164629 5.0046165,5.940059 5.8465215,5.940059 z"
+         id="grip"
+         class="laser-pistol" />
+      <path
+         style="fill:#c9cacb;fill-opacity:1;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 32.237644,76.009616 c 0,0 9.24221,-0.03753 13.134565,-2.289031 2.802232,-1.620929 4.276778,-2.71494 6.206996,-7.469435 l 0.869969,0.12847 c -2.024637,4.987129 -3.676899,6.325673 -6.633536,8.035916 -4.106827,2.375566 -13.826432,2.427496 -13.826432,2.427496 z"
+         id="trigger-guard"
+         class="laser-pistol" />
+      <path
+         style="fill:#c9cacb;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:square;stroke-linejoin:miter;paint-order:normal"
+         d="m 39.333919,63.751819 c 0,0 -0.471185,3.254011 -0.286493,4.869442 0.109933,0.961543 0.573601,2.306965 0.820325,2.785124 0.278762,0.54025 0.448384,0.746883 0.448384,0.746883 0,0 -0.201405,-2.594235 -0.11161,-3.887483 0.09642,-1.388628 0.695574,-4.117578 0.695574,-4.117578 z"
+         id="trigger"
+         class="laser-pistol" />
+      <path
+         style="fill:#7d302f;fill-opacity:1;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 35.134858,64.462179 1.537891,-3.059245 7.705989,2.265495 c 0,0 -1.994736,-2.332314 -7.88789,-4.382161 -1.974748,-0.686887 -1.35599,5.175911 -1.35599,5.175911 z"
+         id="highlight-2"
+         class="laser-pistol" />
+      <path
+         style="fill:#7d302f;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 14.848691,50.99471 -4.688909,-0.888671 c 3.804136,-2.90767 9.473312,-6.066741 10.775137,-6.051151 -6.635306,4.346792 -5.256022,3.626793 -7.898649,5.489885 0.721071,0.43654 1.184895,0.697685 1.812421,1.449937 z"
+         id="highlight-1"
+         class="laser-pistol" />
+      <path
+         style="fill:#7d302f;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter"
+         d="m 110.73164,35.782063 c 1.40317,0.514493 3.18051,1.379778 4.58367,2.057975 -0.61583,1.442141 -0.78733,3.352005 -1.09914,4.723988 -0.20269,-0.65481 -0.73277,-2.853102 -0.70159,-4.022406 -0.93544,-0.857489 -1.98781,-1.761751 -2.78294,-2.759557 z"
+         id="highlight-3"
+         class="laser-pistol" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 9.0255565,93.031194 6.8287365,8.699626"
+         id="path10840"
+         class="laser-pistol" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 10.255618,87.04265 10.741845,13.62666"
+         id="path10840-3"
+         class="laser-pistol" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none"
+         d="M 11.740479,81.835193 24.30391,97.772641"
+         id="path10840-3-6"
+         class="laser-pistol" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none"
+         d="M 13.520634,76.827268 25.577955,92.122679"
+         id="path10840-3-6-3"
+         class="laser-pistol" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none"
+         d="M 15.809123,71.883117 26.89595,85.947401"
+         id="path10840-3-6-3-9"
+         class="laser-pistol" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 18.344575,67.398354 9.902357,12.561715"
+         id="path10840-3-6-3-9-5"
+         class="laser-pistol" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 21.302179,63.263584 8.640849,10.961419"
+         id="path10840-3-6-3-9-5-6"
+         class="laser-pistol" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.190992;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 25.484536,61.571322 6.227673,7.900165"
+         id="path10840-3-6-3-9-5-6-5"
+         class="laser-pistol" />
+      <path
+         style="fill:none;fill-opacity:1;stroke:#6b1f1e;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 84.403296,64.516989 2.991652,1.940245"
+         id="vent-1"
+         class="laser-pistol" />
+      <path
+         style="fill:none;fill-opacity:1;stroke:#6b1f1e;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 88.178296,64.051991 2.991652,1.940245"
+         id="vent-2"
+         class="laser-pistol" />
+      <path
+         style="fill:#7d302f;fill-opacity:1;stroke:#6b1f1e;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 91.916177,63.558531 2.991653,1.940246"
+         id="vent-3"
+         class="laser-pistol" />
+      <circle
+         style="fill:#25a405;fill-opacity:1;stroke:#000000;stroke-width:0.565;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="light-1"
+         cx="59.443459"
+         cy="49.777809"
+         r="1.6536458"
+         class="laser-pistol" />
+      <circle
+         style="fill:#1d8103;fill-opacity:1;stroke:#000000;stroke-width:0.565;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="light-2"
+         cx="65.561951"
+         cy="49.777809"
+         r="1.6536458"
+         class="laser-pistol" />
+      <circle
+         style="fill:#1d8103;fill-opacity:1;stroke:#000000;stroke-width:0.565;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="light-3"
+         cx="71.680435"
+         cy="49.777809"
+         r="1.6536458"
+         class="laser-pistol" />
+      <circle
+         style="fill:#1d8103;fill-opacity:1;stroke:#000000;stroke-width:0.565;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="light-4"
+         cx="77.79892"
+         cy="49.777809"
+         r="1.6536458"
+         class="laser-pistol" />
+      <path
+         style="fill:#232834;fill-opacity:1;stroke:#000000;stroke-width:0.265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 42.806007,37.463342 c 29.619673,-9.918215 51.402612,-2.712786 51.402612,-2.712786 -3.572604,2.677821 -2.448853,7.604602 -1.953488,10.315496 L 55.62158,45.321068 C 50.960183,45.218038 43.476408,43.45018 42.806007,37.463342 Z"
+         id="display"
+         class="laser-pistol" />
+      <path
+         style="fill:#f1f1f1;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter"
+         d="m 114.50159,47.870413 h 13.36146 v 1.422136 h -13.36146 z"
+         id="antenna"
+         class="laser-pistol" />
+      <circle
+         style="fill:#b23232;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583"
+         id="ball"
+         cx="130.14207"
+         cy="48.581486"
+         r="2.525697"
+         class="laser-pistol" />
+      <path
+         id="disc-3"
+         style="fill:#b23232;fill-opacity:1;stroke:#000000;stroke-width:0.176;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 124.7817,45.315531 c -0.22145,-6.85e-4 -0.40101,1.461731 -0.40101,3.26595 0,1.804219 0.17956,3.266635 0.40101,3.26595 0.18222,-8.49e-4 0.34144,-1.002892 0.38757,-2.439127 -0.10101,-0.27688 -0.15278,-0.569302 -0.15296,-0.864031 3e-4,-0.292349 0.0514,-0.532818 0.15089,-0.807702 -0.0491,-1.40334 -0.20641,-2.420934 -0.3855,-2.42104 z"
+         class="laser-pistol" />
+      <path
+         id="disc-2"
+         style="fill:#b23232;fill-opacity:1;stroke:#000000;stroke-width:0.176;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 121.70834,44.293938 a 0.43011931,4.257078 0 0 0 -0.42995,4.257103 0.43011931,4.257078 0 0 0 0.42995,4.257104 0.43011931,4.257078 0 0 0 0.42013,-3.346564 2.525697,2.525697 0 0 1 -0.15968,-0.880052 2.525697,2.525697 0 0 1 0.16071,-0.883666 0.43011931,4.257078 0 0 0 -0.42116,-3.403925 z"
+         class="laser-pistol" />
+      <path
+         id="disc-1"
+         style="fill:#b23232;fill-opacity:1;stroke:#000000;stroke-width:0.176;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 118.87233,42.052213 a 0.66162972,6.5484374 0 0 0 -0.66146,6.548437 0.66162972,6.5484374 0 0 0 0.66146,6.548438 0.66162972,6.5484374 0 0 0 0.65578,-5.694744 1.1634576,1.1634576 0 0 1 -0.39533,-0.872815 1.1634576,1.1634576 0 0 1 0.39533,-0.872813 0.66162972,6.5484374 0 0 0 -0.65578,-5.656503 z"
+         class="laser-pistol" />
+    </g>
+  </g>
+</svg>

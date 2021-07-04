@@ -2,6 +2,7 @@
 	"compilerOptions": {
 		"module": "ESNext",
 		"moduleResolution": "node",
+		"lib": ["es2015", "ESNext"],
 		"jsx": "react-jsx",
 		"jsxImportSource": "preact",
 		"types": ["vite/client"],

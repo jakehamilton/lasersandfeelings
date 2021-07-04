@@ -1,6 +1,9 @@
 import "virtual:windi.css";
 import { render as renderToString } from "preact-render-to-string";
-import { Router, Route, CustomHistory } from "preact-router";
+import { Router, Route, CustomHistory, route } from "preact-router";
+import { SocketProvider } from "./contexts/socket";
+import Match from "preact-router/match";
+import App from "./App";
 
 const pages = import.meta.globEager("./pages/**/*.tsx");
 
@@ -9,12 +12,10 @@ const routes = Object.keys(pages).map((path) => {
 
 	return {
 		name,
-		path: name === "Home" ? "/" : `/${name.toLowerCase()}`,
+		path: pages[path].path ?? name === "Home" ? "/" : `/${name.toLowerCase()}`,
 		component: pages[path].default,
 	};
 });
-
-const noop = () => {};
 
 export const render = (url, context) => {
 	const customHistory: CustomHistory = {
@@ -22,20 +23,16 @@ export const render = (url, context) => {
 			pathname: url,
 			search: "",
 		},
-		listen: (cb) => () => {
-			console.log("listen()");
+		listen: () => () => {},
+		push: (path) => {
+			context.url = path;
 		},
-		push: noop,
-		replace: noop,
+		replace: (path) => {
+			context.url = path;
+		},
 	};
 
-	const result = renderToString(
-		<Router path={url} history={customHistory}>
-			{routes.map(({ name, path, component }) => (
-				<Route name={name} path={path} component={component} />
-			))}
-		</Router>
-	);
+	const result = renderToString(<App path={url} history={customHistory} />);
 
 	return result;
 };

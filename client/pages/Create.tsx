@@ -40,17 +40,17 @@ const Create = () => {
 			<div class="px-4">
 				<form
 					onSubmit={handleSubmit}
-					class="mx-auto mt-10 max-w-100 px-6 py-4 bg-light-200 shadow-md rounded-lg"
+					class="mx-auto mt-10 max-w-100 px-6 py-4 light:bg-light-200 dark:bg-dark-400 shadow-md rounded-lg"
 				>
 					<label class="flex flex-col">
-						<span class="prose-xl flex items-center">
+						<span class="prose-xl flex items-center dark:text-light-900">
 							<Lock class="inline-block mr-1" size={20} />
 							Create A Password
 						</span>
 						<input
 							type="password"
 							placeholder="my-room-password"
-							class="rounded border-light-800 mt-1"
+							class="rounded light:border-light-800 mt-1 dark:border-dark-200 dark:text-light-900 dark:bg-dark-100 dark:placeholder-light-700 dark:placeholder-opacity-50"
 							autocomplete="off"
 							value={password}
 							onChange={handleChange}

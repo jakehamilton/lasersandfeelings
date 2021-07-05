@@ -19,8 +19,6 @@ const project = path.dirname(import.meta.url).replace("file://", "");
 const client = path.resolve(project, "client");
 const publicDir = path.resolve(project, "public");
 
-process.stdout.write(project);
-
 export default defineConfig({
 	root: client,
 	publicDir: publicDir,

@@ -5,7 +5,10 @@
   "main": "server/entry.js",
   "scripts": {
     "start": "NODE_ENV=production nodemon",
-    "dev": "NODE_ENV=development nodemon"
+    "dev": "NODE_ENV=development nodemon",
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "vite build --outDir dist/client",
+    "build:server": "vite build --outDir dist/server --ssr entry-server.tsx"
   },
   "repository": {
     "type": "git",
@@ -23,7 +26,7 @@
   },
   "dependencies": {
     "@leverage/core": "^4.0.5",
-    "@leverage/plugin-http": "^4.0.2",
+    "@leverage/plugin-http": "^4.0.3",
     "@leverage/plugin-websocket": "^2.0.4",
     "@littlethings/log": "^2.5.0",
     "@preact/preset-vite": "^2.1.0",

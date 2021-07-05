@@ -26,6 +26,7 @@ export interface CharacterInfoProps {
 	style: keyof typeof styles;
 	role: keyof typeof roles;
 	status: Statuses;
+	lastRoll: string;
 }
 
 const CharacterInfo: FunctionComponent<CharacterInfoProps> = ({
@@ -33,6 +34,7 @@ const CharacterInfo: FunctionComponent<CharacterInfoProps> = ({
 	style,
 	role,
 	status,
+	lastRoll,
 }) => {
 	return (
 		<div class="flex flex-col transition-all dark:bg-dark-400 light:bg-light-700 rounded-lg overflow-hidden w-55 h-37">
@@ -51,6 +53,7 @@ const CharacterInfo: FunctionComponent<CharacterInfoProps> = ({
 			</div>
 			<CharacterStatus
 				status={status}
+				lastRoll={lastRoll}
 				class="flex items-end justify-center flex-grow p-4 pt-2 text-size-[1.5rem]"
 			/>
 		</div>

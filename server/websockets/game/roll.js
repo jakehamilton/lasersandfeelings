@@ -1,11 +1,9 @@
 const { useDependencies, useService } = require("@leverage/core");
 const { useWebSocket } = require("@leverage/plugin-websocket");
 
-const log = require("../../lib/log");
-
 const init = () => {
 	useWebSocket({
-		event: "game:auth",
+		event: "game:roll",
 	});
 
 	useDependencies({
@@ -13,12 +11,10 @@ const init = () => {
 	});
 };
 
-const handler = (socket, { key }) => {
-	log.debug({ scope: "websocket", event: "game:auth", key });
-
-	console.log([...socket.rooms].filter((x) => x !== socket.id));
-
+const handler = (socket, data) => {
 	const games = useService("games");
+
+	games.roll(socket, data);
 };
 
 module.exports = {

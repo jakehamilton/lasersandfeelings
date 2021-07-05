@@ -4,7 +4,7 @@ const log = require("../lib/log");
 
 const init = () => {
 	useWebSocket({
-		event: "disconnect",
+		event: "disconnecting",
 	});
 	useDependencies({
 		services: ["games"],
@@ -12,7 +12,7 @@ const init = () => {
 };
 
 const handler = (socket) => {
-	log.debug({ scope: "websocket", event: "disconnect", id: socket.id });
+	log.debug({ scope: "websocket", event: "disconnecting", id: socket.id });
 	const games = useService("games");
 
 	const rooms = [...socket.rooms].filter((room) => room !== socket.id);

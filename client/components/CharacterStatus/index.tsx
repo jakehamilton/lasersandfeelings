@@ -31,18 +31,20 @@ export enum Statuses {
 
 interface CharacterStatusProps {
 	status: Statuses;
+	lastRoll: string;
 	class?: string;
 	[key: string]: any;
 }
 
 const CharacterStatus: FunctionComponent<CharacterStatusProps> = ({
 	status,
+	lastRoll,
 	class: className,
 	...props
 }) => {
 	return status === Statuses.LASER_FEELINGS ? (
 		<div
-			key={status}
+			key={lastRoll}
 			{...props}
 			class={`font-thick animate animate-bounce-in ${className ?? ""}`}
 		>
@@ -51,7 +53,7 @@ const CharacterStatus: FunctionComponent<CharacterStatusProps> = ({
 		</div>
 	) : (
 		<div
-			key={status}
+			key={lastRoll}
 			{...props}
 			class={`font-thick animate animate-bounce-in ${
 				status === Statuses.SUCCESS ? "text-green-500" : ""

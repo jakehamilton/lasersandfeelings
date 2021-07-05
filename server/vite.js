@@ -19,94 +19,32 @@ const init = () => {
 
 		if (!isProd) {
 			viteRef.current = await createServer({
-				root: path.resolve(__dirname, "..", "client"),
-				publicDir: path.resolve(__dirname, "..", "public"),
-				logLevel: isProd ? "info" : "error",
-				clearScreen: false,
-				server: {
-					middlewareMode: true,
-				},
-				plugins: [
-					require("@preact/preset-vite").default(),
-					require("vite-plugin-fonts").default({
-						google: {
-							display: "swap",
-							families: ["Staatliches", "Inter"],
-						},
-					}),
-					require("vite-plugin-windicss").default({
-						root: path.resolve(__dirname, "..", "client"),
-						scan: {
-							include: [path.resolve(__dirname, "..", "client", "**/*.tsx")],
-						},
-						config: {
-							darkMode: "class",
-							theme: {
-								extend: {
-									fontFamily: {
-										thick: "Staatliches",
-										sans: "Inter",
-									},
-									lineClamp: {
-										sm: "2",
-										lg: "8",
-									},
-								},
-							},
-							plugins: [
-								require("windicss/plugin/aspect-ratio"),
-								require("windicss/plugin/typography"),
-								require("windicss/plugin/forms"),
-								require("windicss/plugin/line-clamp"),
-								require("@windicss/plugin-animations")({
-									settings: {},
-								}),
-								require("@windicss/plugin-scrollbar"),
-								require("@windicss/plugin-question-mark"),
-								require("@windicss/plugin-heropatterns")({
-									includeThemeColors: true,
-									patterns: [
-										"topography",
-										"hideout",
-										"bubbles",
-										"squares",
-										"squares-in-squares",
-										"autumn",
-										"bamboo",
-										"charlie-brown",
-										"death-star",
-										"endless-clouds",
-										"heavy-rain",
-										"overcast",
-										"slanted-stars",
-										"volcano-lamp",
-									],
-									colors: {
-										default: "primary",
-										purple: "purple",
-										pink: "pink",
-									},
-									variants: [],
-								}),
-							],
-						},
-					}),
-				],
+				configFile: path.resolve(__dirname, "../vite.config.ts"),
 			});
 
 			fastify.use(viteRef.current.middlewares);
 		} else {
 			fastify.use(require("compression")());
 			fastify.use(
-				require("serve-static")(path.resolve(__dirname, "..", "dist/client"), {
-					index: false,
-				})
+				require("serve-static")(
+					path.resolve(__dirname, "..", "client/dist/client"),
+					{
+						index: false,
+					}
+				)
 			);
 		}
 
 		const indexProd = isProd
 			? fs.readFileSync(
-					path.resolve(__dirname, "..", "client", "index.html"),
+					path.resolve(
+						__dirname,
+						"..",
+						"client",
+						"dist",
+						"client",
+						"index.html"
+					),
 					"utf8"
 			  )
 			: "";
@@ -134,7 +72,7 @@ const init = () => {
 					).render;
 				} else {
 					template = indexProd;
-					render = require("../dist/server/entry-server.js");
+					render = require("../client/dist/server/entry-server.js").render;
 				}
 
 				log.info({
@@ -148,7 +86,13 @@ const init = () => {
 				const appHtml = render(url, context);
 
 				if (context.url) {
-					console.log("redirecting");
+					log.info({
+						scope: "http",
+						path: url,
+						method: req.method,
+						message: "Redirecting",
+						to: context.url,
+					});
 					res.writeHead(301, {
 						Location: context.url,
 					});

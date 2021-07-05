@@ -19,6 +19,8 @@ const useSocket = (): SocketContextValue => {
 				once: noop,
 				emit: noop,
 			} as unknown as Socket,
+			namespace: "/",
+			setNamespace: noop,
 		};
 	} else {
 		return value;

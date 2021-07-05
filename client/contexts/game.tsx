@@ -10,7 +10,9 @@ export interface Character {
 	name: string;
 	style: keyof typeof styles;
 	role: keyof typeof roles;
+	number: number;
 	status: Statuses;
+	lastRoll: string;
 }
 
 export interface Player {

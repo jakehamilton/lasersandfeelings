@@ -21,6 +21,7 @@ export const path = "/play/:id";
 const Play = () => {
 	const { socket, namespace } = useSocket();
 	const { joinOwner, isJoined, needsPlayerAuth, game, role } = useGame();
+	const [isCreating, setIsCreating] = useState(false);
 
 	const ownerKey = useMemo(() => {
 		if (import.meta.env.SSR) {
@@ -36,6 +37,15 @@ const Play = () => {
 		}
 	}, [ownerKey, namespace]);
 
+	const handleCreate = (data) => {
+		setIsCreating(true);
+
+		socket.emit("game:character", data);
+		socket.once("game:character", () => {
+			setIsCreating(false);
+		});
+	};
+
 	const renderContent = () => {
 		if (isJoined) {
 			if (!game || !role || !game.players[socket.id]) {
@@ -47,7 +57,7 @@ const Play = () => {
 					<div>
 						<div class="h-22 light:bg-light-700 dark:bg-dark-500"></div>
 						<div class="px-4">
-							<CreateCharacter />
+							<CreateCharacter onCreate={handleCreate} loading={isCreating} />
 						</div>
 					</div>
 				);

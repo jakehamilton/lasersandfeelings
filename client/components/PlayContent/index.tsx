@@ -5,8 +5,11 @@ import FeelingsActions from "../FeelingsActions";
 import LasersActions from "../LasersActions";
 import Header from "../Header";
 import useGame from "../../hooks/useGame";
+import useSocket from "../../hooks/useSocket";
+import { useMemo } from "preact/hooks";
 
 const PlayContent = () => {
+	const { socket } = useSocket();
 	const { role, game } = useGame();
 
 	return (
@@ -19,7 +22,8 @@ const PlayContent = () => {
 				{role === "player" ? (
 					<>
 						<CharacterStatus
-							status={Statuses.EMPTY}
+							status={game.players[socket.id].character.status}
+							lastRoll={game.players[socket.id].character.lastRoll}
 							class="text-size-[3rem] pb-6"
 						/>
 						<div class="flex justify-center flex-wrap gap-x-8 gap-y-6 px-8 <md:pt-4">

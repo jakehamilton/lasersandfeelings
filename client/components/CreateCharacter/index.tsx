@@ -1,13 +1,30 @@
+import { FunctionComponent } from "preact";
 import { ArrowRight, Edit3, Lock, User, Users, Zap } from "preact-feather";
 import { useState } from "preact/hooks";
+import { Character } from "../../contexts/game";
 import ActionButton from "../ActionButton";
 import { roles, styles } from "../CharacterInfo";
 import { Statuses } from "../CharacterStatus";
+import FeelingsOutline from "../FeelingsOutline";
+import LaserPistolOutline from "../LaserPistolOutline";
 
-const CreateCharacter = (props) => {
+interface CreateCharacterProps {
+	class?: string;
+	name?: Character["name"];
+	style?: Character["style"];
+	role?: Character["role"];
+	number?: Character["number"];
+	onCreate?: (character: Omit<Character, "status" | "lastRoll">) => void;
+	loading?: boolean;
+}
+
+const CreateCharacter: FunctionComponent<CreateCharacterProps> = (props) => {
 	const [name, setName] = useState(props.name ?? "");
-	const [style, setStyle] = useState(props.style ?? styles.Alien);
-	const [role, setRole] = useState(props.role ?? roles.Doctor);
+	const [style, setStyle] = useState<Character["style"]>(
+		props.style ?? "Alien"
+	);
+	const [role, setRole] = useState<Character["role"]>(props.role ?? "Doctor");
+	const [number, setNumber] = useState<Character["number"]>(props.number ?? 3);
 
 	const [nameError, setNameError] = useState(null);
 
@@ -23,12 +40,24 @@ const CreateCharacter = (props) => {
 		setRole(event.target.value);
 	};
 
+	const handleChangeNumber = (event) => {
+		setNumber(event.target.value);
+	};
+
 	const handleSubmit = (event) => {
 		event.preventDefault();
 
 		if (name.trim() === "") {
 			setNameError("Your character must have a name.");
+			return;
 		}
+
+		props.onCreate?.({
+			name,
+			style,
+			role,
+			number,
+		});
 	};
 
 	return (
@@ -46,7 +75,7 @@ const CreateCharacter = (props) => {
 				{nameError ? <span class="text-red-500">{nameError}</span> : null}
 				<input
 					type="text"
-					placeholder="my-room-password"
+					placeholder="Glarg McFurglestein"
 					class={`rounded border-light-800 mt-1 ${
 						nameError ? "border-red-500" : ""
 					}`}
@@ -63,7 +92,8 @@ const CreateCharacter = (props) => {
 				</span>
 				<select
 					class="rounded border-light-800 mt-1 px-3 py-2"
-					onChange={handleChangeStyle}
+					onInput={handleChangeStyle}
+					value={style}
 				>
 					{Object.keys(styles).map((style) => (
 						<option key={style} value={style}>
@@ -79,7 +109,8 @@ const CreateCharacter = (props) => {
 				</span>
 				<select
 					class="rounded border-light-800 mt-1 px-3 py-2"
-					onChange={handleChangeStyle}
+					value={role}
+					onInput={handleChangeRole}
 				>
 					{Object.keys(roles).map((role) => (
 						<option key={role} value={role}>
@@ -88,8 +119,28 @@ const CreateCharacter = (props) => {
 					))}
 				</select>
 			</label>
+			<label class="flex flex-col pb-4">
+				<div class="prose-xl flex items-center justify-between">
+					<span class="flex items-center">
+						<LaserPistolOutline class="mr-2" width="32" />
+						Lasers
+					</span>
+					<span class="flex items-center">
+						Feelings
+						<FeelingsOutline class="ml-2" width="32" />
+					</span>
+				</div>
+				<input
+					type="range"
+					min="2"
+					max="5"
+					step="1"
+					onInput={handleChangeNumber}
+					value={number}
+				/>
+			</label>
 			<div class="pt-2 flex justify-center">
-				<ActionButton type="submit" loading={props.loading}>
+				<ActionButton type="submit" loading={props.loading ?? false}>
 					Create <ArrowRight class="ml-2 transition-all group-hover:ml-3" />
 				</ActionButton>
 			</div>

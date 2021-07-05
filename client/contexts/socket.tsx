@@ -1,5 +1,6 @@
 import { FunctionComponent } from "preact";
 import { createContext } from "preact";
+import { getCurrentUrl } from "preact-router";
 import { useMemo, useState, useEffect } from "preact/hooks";
 import { io, Socket } from "socket.io-client";
 import noop from "../util/noop";
@@ -7,14 +8,19 @@ import noop from "../util/noop";
 export interface SocketContextValue {
 	socket: Socket | null;
 	isConnected: boolean;
+	namespace: string;
+	setNamespace: (namespace: string) => void;
 }
 
 export const SocketContext = createContext<SocketContextValue>({
 	socket: null,
 	isConnected: false,
+	namespace: "",
+	setNamespace: noop,
 });
 
 export const SocketProvider: FunctionComponent = ({ children }) => {
+	const [namespace, setNamespace] = useState(getCurrentUrl());
 	const [isConnected, setIsConnected] = useState(false);
 
 	const socket = useMemo(() => {
@@ -44,7 +50,9 @@ export const SocketProvider: FunctionComponent = ({ children }) => {
 	}, []);
 
 	return (
-		<SocketContext.Provider value={{ socket, isConnected }}>
+		<SocketContext.Provider
+			value={{ socket, isConnected, namespace, setNamespace }}
+		>
 			{children}
 		</SocketContext.Provider>
 	);

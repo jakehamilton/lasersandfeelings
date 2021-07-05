@@ -16,7 +16,9 @@ const init = () => {
 const handler = (request, reply) => {
 	const games = useService("games");
 
-	const metadata = games.create();
+	const body = JSON.parse(request.body);
+
+	const metadata = games.create(body);
 
 	reply.send(metadata);
 };

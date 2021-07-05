@@ -40,7 +40,7 @@ const init = () => {
 							include: [path.resolve(__dirname, "..", "client", "**/*.tsx")],
 						},
 						config: {
-							darkMode: "media",
+							darkMode: "class",
 							theme: {
 								extend: {
 									fontFamily: {

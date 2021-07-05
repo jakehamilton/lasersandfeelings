@@ -1,9 +1,9 @@
-import { FunctionComponent } from "preact";
+import { FunctionComponent, AnyComponent } from "preact";
 import DynamicElement from "../DynamicElement";
 import Loading from "../Loading";
 
 interface ActionButtonProps {
-	as?: string;
+	as?: string | AnyComponent;
 	disabled?: boolean;
 	loading?: boolean;
 	[key: string]: any;

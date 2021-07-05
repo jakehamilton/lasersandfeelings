@@ -3,10 +3,12 @@ import { Socket } from "socket.io-client";
 import { SocketContext, SocketContextValue } from "../contexts/socket";
 import noop from "../util/noop";
 
-type Listener = (event: string, handler: (...args: Array<any>) => void) => void;
-
 const useSocket = (): SocketContextValue => {
 	const value = useContext(SocketContext);
+
+	if (value === undefined) {
+		throw new Error(`useSocket() MUST be used within a <SocketProvider>`);
+	}
 
 	if (import.meta.env.SSR) {
 		return {

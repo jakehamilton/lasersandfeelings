@@ -1,62 +1,35 @@
-import CharacterInfo, { Statuses } from "../CharacterInfo";
+import CharacterInfo from "../CharacterInfo";
+import Characters from "../Characters";
+import CharacterStatus, { Statuses } from "../CharacterStatus";
 import FeelingsActions from "../FeelingsActions";
 import LasersActions from "../LasersActions";
-import PlayHeader from "../PlayHeader";
+import Header from "../Header";
+import useGame from "../../hooks/useGame";
 
 const PlayContent = () => {
+	const { role, game } = useGame();
+
 	return (
 		<div class="flex flex-col items-center flex-grow overflow-x-hidden overflow-x-auto pb-20">
-			<div class="light:bg-light-700 dark:bg-dark-500 pb-10 w-[100vw] flex flex-col items-center">
-				<PlayHeader />
-				<div class="flex justify-center flex-wrap gap-x-8 gap-y-6">
-					<LasersActions />
-					<FeelingsActions />
-				</div>
+			<div
+				class={`${
+					role === "player" ? "pt-22 <md:pt-35" : "pt-12"
+				} light:bg-light-700 dark:bg-dark-500 pb-10 w-[100vw] flex flex-col items-center`}
+			>
+				{role === "player" ? (
+					<>
+						<CharacterStatus
+							status={Statuses.EMPTY}
+							class="text-size-[3rem] pb-6"
+						/>
+						<div class="flex justify-center flex-wrap gap-x-8 gap-y-6 px-8 <md:pt-4">
+							<LasersActions />
+							<FeelingsActions />
+						</div>
+					</>
+				) : null}
 			</div>
-			<div class="flex justify-center flex-wrap pt-10 gap-4">
-				<CharacterInfo
-					name="Captain Darcy"
-					style="Alien"
-					role="Doctor"
-					status={Statuses.EMPTY}
-				/>
-				<CharacterInfo
-					name="Captain Darcy"
-					style="Android"
-					role="Engineer"
-					status={Statuses.SUCCESS}
-				/>
-				<CharacterInfo
-					name="Captain Darcy"
-					style="Dangerous"
-					role="Envoy"
-					status={Statuses.MIXED}
-				/>
-				<CharacterInfo
-					name="Captain Darcy"
-					style="Heroic"
-					role="Explorer"
-					status={Statuses.FAILURE}
-				/>
-				<CharacterInfo
-					name="Captain Darcy"
-					style="Hot-Shot"
-					role="Pilot"
-					status={Statuses.LASER_FEELINGS}
-				/>
-				<CharacterInfo
-					name="Captain Darcy"
-					style="Intrepid"
-					role="Scientist"
-					status={Statuses.CRITICAL}
-				/>
-				<CharacterInfo
-					name="Captain Darcy"
-					style="Savvy"
-					role="Soldier"
-					status={Statuses.EMPTY}
-				/>
-			</div>
+			<Characters />
 		</div>
 	);
 };

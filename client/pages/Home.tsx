@@ -2,6 +2,7 @@ import { Download } from "preact-feather";
 import { route } from "preact-router";
 import { useEffect, useState } from "preact/hooks";
 import ActionButton from "../components/ActionButton";
+import Header from "../components/Header";
 import Hero from "../components/Hero";
 import useSocket from "../hooks/useSocket";
 
@@ -10,17 +11,20 @@ const Home = () => {
 	const { isConnected } = useSocket();
 
 	const handlePlayNow = async () => {
+		return;
+
 		setIsCreatingGame(true);
 
 		try {
 			const response = await fetch("/api/game/create", {
 				method: "POST",
 			});
-			const { id, key } = await response.json();
 
-			localStorage.setItem(id, key);
+			const { id, ownerKey } = await response.json();
 
-			route(`/play/${id}`);
+			localStorage.setItem(id, ownerKey);
+
+			route(id);
 		} catch (error) {
 			console.error("Error", error);
 		}
@@ -28,6 +32,7 @@ const Home = () => {
 
 	return (
 		<div class="h-[100vh] w-[100vw] overflow-x-hidden overflow-y-auto pb-10 light:bg-light-600 dark:bg-dark-500">
+			<Header class="absolute top-0 left-0 right-0" />
 			<Hero
 				onPlayNow={handlePlayNow}
 				isPlayNowLoading={!isConnected || isCreatingGame}

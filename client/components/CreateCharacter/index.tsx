@@ -41,7 +41,8 @@ const CreateCharacter: FunctionComponent<CreateCharacterProps> = (props) => {
 	};
 
 	const handleChangeNumber = (event) => {
-		setNumber(event.target.value);
+		console.log(7 - event.target.value);
+		setNumber(7 - event.target.value);
 	};
 
 	const handleSubmit = (event) => {
@@ -77,7 +78,7 @@ const CreateCharacter: FunctionComponent<CreateCharacterProps> = (props) => {
 					type="text"
 					placeholder="Glarg McFurglestein"
 					class={`rounded light:border-light-800 dark:border-dark-200 dark:text-light-900 dark:bg-dark-100 dark:placeholder-light-700 dark:placeholder-opacity-50 mt-1 ${
-						nameError ? "border-red-500" : ""
+						nameError ? "!border-red-500" : ""
 					}`}
 					autocomplete="off"
 					value={name}

@@ -28,11 +28,11 @@ const Header: FunctionComponent<HeaderProps> = ({ class: className = "" }) => {
 		>
 			<div class="flex gap-2">
 				{url !== "/" ? (
-					<ActionIcon as={Link} href="/" class="">
+					<ActionIcon as={Link} href="/" aria-label="Home">
 						<Home />
 					</ActionIcon>
 				) : null}
-				<ActionIcon onClick={handleToggleDarkTheme}>
+				<ActionIcon onClick={handleToggleDarkTheme} aria-label="Toggle theme">
 					{isDarkTheme ? <Moon /> : <Sun />}
 				</ActionIcon>
 			</div>
@@ -43,6 +43,7 @@ const Header: FunctionComponent<HeaderProps> = ({ class: className = "" }) => {
 					rel="noopener noreferrer"
 					href="https://github.com/jakehamilton/lasersandfeelings"
 					class=""
+					aria-label="GitHub"
 				>
 					<Github />
 				</ActionIcon>

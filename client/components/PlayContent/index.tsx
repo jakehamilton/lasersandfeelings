@@ -33,6 +33,22 @@ const PlayContent = () => {
 					</>
 				) : null}
 			</div>
+			{role === "owner" && Object.keys(game.players).length === 1 ? (
+				<div class="flex flex-col items-center px-4">
+					<h1 class="text-size-[2.5rem] light:text-dark-300 dark:text-light-900 pt-8">
+						All Set!
+					</h1>
+					<span class="block mt-3 text-size-[1.15rem] light:text-dark-300 dark:text-light-900">
+						Share the link to this page with your friends to play.
+					</span>
+					<span class="block mt-[6px] text-size-[1.15rem] light:text-dark-300 dark:text-light-900">
+						You'll see the characters they create once they join!
+					</span>
+					<span class="block mt-4 rounded light:text-blue-500 light:bg-light-700 dark:text-blue-400 dark:bg-dark-400 py-1 px-2">
+						{window.location.href}
+					</span>
+				</div>
+			) : null}
 			<Characters />
 		</div>
 	);

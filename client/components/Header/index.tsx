@@ -24,7 +24,7 @@ const Header: FunctionComponent<HeaderProps> = ({ class: className = "" }) => {
 
 	return (
 		<div
-			class={`lg:container lg:mx-auto flex justify-between p-4 w-full ${className}`}
+			class={`lg:container lg:mx-auto flex justify-between p-4 w-full z-30 ${className}`}
 		>
 			<div class="flex gap-2">
 				{url !== "/" ? (

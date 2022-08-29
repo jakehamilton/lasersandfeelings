@@ -45,8 +45,9 @@ const Home = () => {
 				</p>
 				<ActionButton
 					as="a"
-					download
-					href="http://onesevendesign.com/lasers_and_feelings_rpg.pdf"
+					href="https://johnharper.itch.io/lasers-feelings"
+					target="_blank"
+					rel="noopener noreferrer"
 				>
 					<Download class="mr-2" /> Download Rules
 				</ActionButton>

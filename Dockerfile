@@ -1,6 +1,6 @@
 FROM node:14-alpine
 
-COPY package*.json /tmp
+COPY package*.json /tmp/
 
 RUN cd /tmp && npm ci && mkdir -p /opt/app
 

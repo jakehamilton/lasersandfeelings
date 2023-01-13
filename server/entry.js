@@ -1,13 +1,26 @@
+#!/usr/bin/env node
+
 const { add, remove, emit, once } = require("@leverage/core");
 const { http } = require("@leverage/plugin-http");
 const { websocket } = require("@leverage/plugin-websocket");
 const requireAll = require("require-dir-all");
 
+const log = require("./lib/log");
+
+let exitCounter = 0;
+
 const cleanup = () => {
+	exitCounter++;
 	once("http:closed", () => {
 		process.exit(1);
 	});
 	emit("http:close");
+
+	if (exitCounter == 2) {
+		process.exit(1);
+	} else {
+		log.warn("Exiting gracefully, press ^C again or to exit immediately.");
+	}
 };
 
 const main = async () => {

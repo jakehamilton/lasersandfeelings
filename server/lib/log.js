@@ -1,3 +1,3 @@
-const littlelog = require("@littlethings/log");
+const littlelog = require("@littlethings/log").default;
 
 module.exports = littlelog;

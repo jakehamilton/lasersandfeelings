@@ -24,7 +24,7 @@ const PlayAuth = () => {
 			<div class="px-4">
 				<form
 					onSubmit={handleSubmit}
-					class="mx-auto mt-10 max-w-100 px-6 py-4 bg-light-200 shadow-md rounded-lg"
+					class="mx-auto mt-10 max-w-100 px-6 py-4 bg-light-200 dark:bg-dark-400 shadow-md rounded-lg"
 				>
 					<label class="flex flex-col">
 						<span class="prose-xl flex items-center">

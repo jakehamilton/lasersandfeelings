@@ -8,6 +8,9 @@ const { useFastify } = require("@leverage/plugin-http/src/plugin");
 const log = require("./lib/log");
 
 const isProd = process.env.NODE_ENV !== "development";
+const CLIENT_DIST =
+	process.env.CLIENT_DIST ||
+	path.resolve(__dirname, "..", "client/dist/client");
 
 const init = () => {
 	useHTTP();
@@ -26,12 +29,9 @@ const init = () => {
 		} else {
 			fastify.use(require("compression")());
 			fastify.use(
-				require("serve-static")(
-					path.resolve(__dirname, "..", "client/dist/client"),
-					{
-						index: false,
-					}
-				)
+				require("serve-static")(CLIENT_DIST, {
+					index: false,
+				})
 			);
 		}
 

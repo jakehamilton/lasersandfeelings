@@ -43,7 +43,7 @@ const main = async () => {
 		emit("http:configure", {});
 
 		emit("http:listen", {
-			port: 8080,
+			port: process.env.NODE_PORT ? Number(process.env.NODE_PORT) : 8080,
 			host: "0.0.0.0",
 		});
 

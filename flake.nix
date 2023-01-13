@@ -27,7 +27,8 @@
             default = lasersandfeelings;
 
             lasersandfeelings = buildNpmPackage {
-              name = "lasersandfeelings-frontend";
+              pname = "lasersandfeelings";
+              version = inputs.self.sourceInfo.shortRev or "dirty";
 
               src = ./.;
 
